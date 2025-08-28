@@ -23,7 +23,7 @@
                     <a href="#contact">Contact</a>
                 </nav>
                 <div class="header-contact">
-                    <span class="phone">📞 (555) 123-4567</span>
+                    <span class="phone">📞 12343-45673</span>
                     <button class="reserve-btn">Reserve Table</button>
                 </div>
             </div>
@@ -113,10 +113,10 @@
                 </div>
                 <div class="about-images">
                     <div class="image-grid">
-                        <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Chef preparing dish" class="grid-image">
-                        <img src="https://images.unsplash.com/photo-1567306301408-9b74779a11af?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Signature dish" class="grid-image">
-                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Restaurant ambiance" class="grid-image">
-                        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Wine selection" class="grid-image">
+                        <img src="firs.avif" alt="Chef preparing dish" class="grid-image">
+                        <img src="sec.avif" alt="Signature dish" class="grid-image">
+                        <img src="thi.avif" alt="Restaurant ambiance" class="grid-image">
+                        <img src="fo.avif" alt="Wine selection" class="grid-image">
                     </div>
                 </div>
             </div>
@@ -209,7 +209,7 @@
             </div>
             <div class="menu-cta">
                 <p>View our complete menu with seasonal specialties and wine pairings</p>
-                <button class="btn-primary">Download Full Menu</button>
+                
             </div>
         </div>
     </section>
@@ -233,7 +233,7 @@
                         <div class="info-card">
                             <div class="card-icon">📞</div>
                             <h3>Reservations</h3>
-                            <p>(555) 123-4567<br>reservations@savoria.com</p>
+                            <p>12343-45673<br>reservations@savoria.com</p>
                         </div>
                         <div class="info-card">
                             <div class="card-icon">🕐</div>
@@ -243,7 +243,7 @@
                         <div class="info-card">
                             <div class="card-icon">✉️</div>
                             <h3>Private Events</h3>
-                            <p>events@savoria.com<br>(555) 123-4568</p>
+                            <p>events@savoria.com<br>12343-45673</p>
                         </div>
                     </div>
                     <div class="reservation-form">
@@ -311,11 +311,11 @@
                     <h4>Contact</h4>
                     <div class="contact-item">
                         <span>📍</span>
-                        <span>123 Gourmet Street<br>New York, NY 10001</span>
+                        <span>123 Gourmet Street<br>Downtown</span>
                     </div>
                     <div class="contact-item">
                         <span>📞</span>
-                        <span>(555) 123-4567</span>
+                        <span>12343-45673</span>
                     </div>
                     <div class="contact-item">
                         <span>✉️</span>
@@ -333,5 +333,42 @@
             </div>
         </div>
     </footer>
+        ...
+    </footer>
+
+    <!-- JavaScript for button actions -->
+       <script>
+        
+        document.querySelector(".reserve-btn")?.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#contact .reservation-form").scrollIntoView({ behavior: "smooth" });
+        });
+
+        
+        document.querySelector(".hero .btn-primary")?.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#contact .reservation-form").scrollIntoView({ behavior: "smooth" });
+        });
+
+        
+        document.querySelector(".hero .btn-secondary")?.addEventListener("click", () => {
+            document.querySelector("#menu").scrollIntoView({ behavior: "smooth" });
+        });
+
+        
+        document.querySelector(".final-cta .btn-primary")?.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector("#contact .reservation-form").scrollIntoView({ behavior: "smooth" });
+        });
+
+        const form = document.querySelector(".reservation-form form");
+        if (form) {
+            form.addEventListener("submit", function(e){
+                e.preventDefault(); 
+                alert("✅ Thank you! Your reservation has been received. We will contact you soon.");
+                form.reset(); 
+            });
+        }
+    </script>
 </body>
 </html>
